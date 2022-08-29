@@ -5,8 +5,10 @@
   </header>
 
   <% if enhanced_cart.length() == 0 %>
-    <h2>Your Cart is Empty, Please add items to your cart!!</h2>
+  <div class="alert alert-danger">
+    <h2>Your Cart is Empty, Please add items to your cart!</h2>
     <a class="navbar-brand" href="<%= root_path %>">Home</a>
+  </div>
   <% else %>
     <div class="panel panel-default items">
       <table class="table table-bordered">
