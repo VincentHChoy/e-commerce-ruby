@@ -1,12 +1,13 @@
 <h1>Signup!</h1>
 
-<div class="d-flex flex-column">
-<%= form_for :user, url: '/users', :html => { :class => "d-flex flex-column" } do |f| %>
-  First Name: <%= f.text_field :first_name %>
-  Last Name: <%= f.text_field :last_name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
+<div>
+<%= form_for :user, url: '/users', :html => { :class => "d-flex flex-column", :id => "new_user" } do |f| %>
+  
+  <label>First Name: <%= f.text_field :first_name %></label>
+  <label>Last Name: <%= f.text_field :last_name %></label>
+  <label>Email: <%= f.text_field :email %></label>
+  <label>Password: <%= f.password_field :password %></label>
+  <label>Password Confirmation: <%= f.password_field :password_confirmation %></label>
   <br>
   <%= f.submit "Submit", class:"btn btn-success" %>
 <% end %>
